@@ -5,6 +5,9 @@ It is a example for using [GoogleAPI] (https://developers.google.com/google-apps
 ****
 #####　　　　　　　　　　　　Author:Ching-Jing
 #####　　　　　　　　　 E-mail:book87118@gmail.com
+#####　　　　　　　　　 My chinese explain website:[http://ching-jing-lin.blogspot.com/](http://ching-jing-lin.blogspot.com/)
+#####　　　　　　　　　 My exlain for [RecycleView](http://ching-jing-lin.blogspot.com/2016/07/android-recycleview.html)
+
 ===========================
 
 
