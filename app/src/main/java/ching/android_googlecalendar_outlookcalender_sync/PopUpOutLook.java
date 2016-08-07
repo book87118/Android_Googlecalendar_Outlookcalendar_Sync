@@ -31,26 +31,19 @@ public class PopUpOutLook {
                 "account", Context.MODE_PRIVATE);
     }
 
-    public void PopUp(){
+    public void popUpShow(){
 
         View view = View.inflate(mContext, R.layout.pouup_outlook, null);
         window = new PopupWindow(mContext);
         window.setContentView(view);
         window.setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
         window.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
-
-
         window.setFocusable(true);
         window.setAnimationStyle(R.style.AnimationPreview);
         window.showAtLocation(view, Gravity.CENTER_HORIZONTAL, 0, 0);
 
-
-
         et_account = (EditText)view.findViewById(R.id.et_account);
         et_password = (EditText)view.findViewById(R.id.et_password);
-
-
-
 
 
         String account  = sp_outlook.getString("outlookAccount","");
@@ -69,6 +62,9 @@ public class PopUpOutLook {
         });
 
     }
+    /*
+    * Use SharedPreferences to memory account and password
+    * */
     private void Click(){
         if(!isEmpty(et_account)  && !isEmpty(et_password) ){
             Log.d(TAG,"dismiss:" +  isEmpty(et_password) + "account" + isEmpty(et_account)  );
@@ -85,7 +81,6 @@ public class PopUpOutLook {
 
         }else {
             Toast.makeText(mContext.getApplicationContext(),"Please fill your information",Toast.LENGTH_SHORT).show();
-
 
         }
     }

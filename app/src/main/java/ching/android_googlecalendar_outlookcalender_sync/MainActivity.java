@@ -1,6 +1,5 @@
 package ching.android_googlecalendar_outlookcalender_sync;
 
-import android.content.Context;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +8,6 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -67,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void requestTask(){
-        new OutlookRequesetTask(this).execute();
+        new OutlookRequestTask(this).execute();
 
     }
 
@@ -93,10 +91,10 @@ public class MainActivity extends AppCompatActivity {
 //                startActivityForResult(mCredential.newChooseAccountIntent(), REQUEST_ACCOUNT_PICKER);
 
                 break;
-            case R.id.outllok:
-//                PopUpOutLook popUpOutLook = new PopUpOutLook(this,this);
-//                popUpOutLook.PopUp();
-//                Toast.makeText(this, "OutLook", Toast.LENGTH_SHORT).show();
+            case R.id.outlook:
+                PopUpOutLook popUpOutLook = new PopUpOutLook(this,this);
+                popUpOutLook.popUpShow();
+
 
                 break;
             default:

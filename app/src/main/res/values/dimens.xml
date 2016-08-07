@@ -5,7 +5,7 @@
     <dimen name="item_margin">8dp</dimen>
 
     <dimen name="text_size">16sp</dimen>
-    <dimen name="hander_size">32sp</dimen>
+    <dimen name="text_head_size">24sp</dimen>
 
 
 </resources>

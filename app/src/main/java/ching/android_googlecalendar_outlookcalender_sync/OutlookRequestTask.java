@@ -24,7 +24,7 @@ import microsoft.exchange.webservices.data.WellKnownFolderName;
 /**
  * Created by book871181 on 16/8/6.
  */
-public class OutlookRequesetTask extends AsyncTask<Void,Void,List<String>>{
+public class OutlookRequestTask extends AsyncTask<Void,Void,List<String>>{
 
     private Exception mLastError = null;
     private final static String TAG = "OutlookRequesetTask";
@@ -36,7 +36,7 @@ public class OutlookRequesetTask extends AsyncTask<Void,Void,List<String>>{
         public Date endDate;
 
     }
-    public  OutlookRequesetTask(MainActivity mMainActivity){
+    public OutlookRequestTask(MainActivity mMainActivity){
         this.mMainActivity = mMainActivity;
 
         outlook_service = new ExchangeService(ExchangeVersion.Exchange2010_SP2);
