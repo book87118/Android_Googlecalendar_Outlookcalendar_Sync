@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.menutest.MainActivity">
+    <item
+        android:id="@+id/google"
+        android:orderInCategory="100"
+        android:title="Google"
+        />
+
+    <item
+        android:id="@+id/outllok"
+        android:orderInCategory="200"
+
+        android:title="Outlook"/>
+
+
+    <item
+        android:id="@+id/setting"
+        android:title="setting">
+        <menu>
+            <item
+                android:id="@+id/setting_outlookAccount"
+                android:orderInCategory="300"
+                android:title="Setting Outlook"/>
+            <item
+                android:id="@+id/setting2"
+                android:orderInCategory="400"
+                android:title="背景設置"/>
+        </menu>
+    </item>
+</menu>

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Android_Googlecalendar_Outlookcalender_Sync.iml" filepath="$PROJECT_DIR$/Android_Googlecalendar_Outlookcalender_Sync.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eWSForAndroid/eWSForAndroid.iml" filepath="$PROJECT_DIR$/eWSForAndroid/eWSForAndroid.iml" />
     </modules>
   </component>
 </project>
