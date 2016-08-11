@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Please offer your Outlook acoount \nand password :"
+        android:text="Please offer your Outlook account \nand password :"
         android:textSize="@dimen/text_head_size"
         />
 
@@ -37,7 +37,7 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Enter"
         android:id="@+id/button_save"
         android:layout_gravity="center_horizontal"/>

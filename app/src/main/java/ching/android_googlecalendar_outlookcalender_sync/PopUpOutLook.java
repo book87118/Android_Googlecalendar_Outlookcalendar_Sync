@@ -20,15 +20,15 @@ public class PopUpOutLook {
     Context mContext;
     EditText et_account;
     EditText et_password;
-    SharedPreferences sp_outlook;
     MainActivity mMainActivity;
     PopupWindow window;
+    SavingSharedPreferences mSavingSharedPreferences;
 
-    public PopUpOutLook(Context mContext, MainActivity mMainActivity){
+    public PopUpOutLook(Context mContext, MainActivity mMainActivity,SavingSharedPreferences mSavingSharedPreferences ){
         this.mContext = mContext;
         this.mMainActivity = mMainActivity;
-        sp_outlook = mContext.getSharedPreferences(
-                "account", Context.MODE_PRIVATE);
+        this.mSavingSharedPreferences = mSavingSharedPreferences;
+
     }
 
     public void popUpShow(){
@@ -45,10 +45,9 @@ public class PopUpOutLook {
         et_account = (EditText)view.findViewById(R.id.et_account);
         et_password = (EditText)view.findViewById(R.id.et_password);
 
-
-        String account  = sp_outlook.getString("outlookAccount","");
+        String account = mSavingSharedPreferences.getOutlookAccount();
         et_account.setText(account);
-        String password  = sp_outlook.getString("outlookPassword","");
+        String password  = mSavingSharedPreferences.getOutlookPassword();
         et_password.setText(password);
 
         Button button_add = (Button)view.findViewById(R.id.button_save);
@@ -70,11 +69,8 @@ public class PopUpOutLook {
             Log.d(TAG,"dismiss:" +  isEmpty(et_password) + "account" + isEmpty(et_account)  );
             String account = et_account.getText().toString();
             String password = et_password.getText().toString();
-
-            SharedPreferences.Editor editor = sp_outlook.edit();
-            editor.putString("outlookAccount",account);
-            editor.putString("outlookPassword", password);
-            editor.commit();
+            mSavingSharedPreferences.setOutlookAccount(account);
+            mSavingSharedPreferences.setOutlookPassword(password);
 
             window.dismiss();
 

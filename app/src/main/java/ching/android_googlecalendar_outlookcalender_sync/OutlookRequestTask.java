@@ -36,29 +36,24 @@ public class OutlookRequestTask extends AsyncTask<Void,Void,List<String>>{
         public Date endDate;
 
     }
-    public OutlookRequestTask(MainActivity mMainActivity){
+    String account ;
+    public OutlookRequestTask(MainActivity mMainActivity,String account,String password){
         this.mMainActivity = mMainActivity;
 
         outlook_service = new ExchangeService(ExchangeVersion.Exchange2010_SP2);
-        ExchangeCredentials credentials = new WebCredentials("book87118@outlook.com", "Aa74747474");
+        ExchangeCredentials credentials = new WebCredentials(account,password);
 
         outlook_service.setCredentials(credentials);
+        this.account = account;
 
-
-        try {
-            outlook_service.autodiscoverUrl("book87118@outlook.com");
-            mDate = settingDate(30);
-
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Outlook Task:"+   e.getMessage());
-        }
 
 
     }
     @Override
     protected List<String> doInBackground(Void... params) {
         try {
-
+            outlook_service.autodiscoverUrl(account);
+            mDate = settingDate(30);
             return findAppointments(mDate);
         } catch (Exception e) {
             mLastError = e;
@@ -80,6 +75,17 @@ public class OutlookRequestTask extends AsyncTask<Void,Void,List<String>>{
         }
     }
 
+    @Override
+    protected void onCancelled() {
+        super.onCancelled();
+        if(mLastError != null){
+            Log.e(TAG,"The following error occurred:\n"
+                    + mLastError.getMessage());
+        }else {
+            Log.e(TAG, "Request cancelled.");
+
+        }
+    }
 
     private SearchDate settingDate(int howManyDate) throws  Exception {
         SearchDate mDate = new SearchDate();
@@ -102,7 +108,6 @@ public class OutlookRequestTask extends AsyncTask<Void,Void,List<String>>{
         private List<String> findAppointments(SearchDate mDate) throws Exception{
 
 
-
             CalendarFolder cf = CalendarFolder.bind(outlook_service, WellKnownFolderName.Calendar);
 
             FindItemsResults<Appointment> findResults = cf.findAppointments(
@@ -115,11 +120,9 @@ public class OutlookRequestTask extends AsyncTask<Void,Void,List<String>>{
 
                 String appoint = "Outlook :" + "\n" + appt.getSubject() + "\n" + appt.getStart();
                 Log.e(TAG,"add : "+appoint );
-
                 message.add(appoint);
 
             }
-
 
             if(message != null){
                 Log.d(TAG, "message:" + message.size());

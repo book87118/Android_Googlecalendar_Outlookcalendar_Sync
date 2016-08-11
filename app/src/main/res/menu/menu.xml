@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="com.example.menutest.MainActivity">
+
+    <item
+        android:id="@+id/reload"
+        android:icon="@drawable/reload_icon"
+        android:orderInCategory="1"
+        app:showAsAction ="always"
+        android:title="reflash"
+        />
     <item
         android:id="@+id/google"
-        android:orderInCategory="100"
+        android:orderInCategory="2"
+        app:showAsAction="never"
         android:title="Google"
         />
 
     <item
         android:id="@+id/outlook"
-        android:orderInCategory="200"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:title="Outlook"
+        />
 
-        android:title="Outlook"/>
 
-
-    <item
-        android:id="@+id/setting"
-        android:title="setting">
-        <menu>
-            <item
-                android:id="@+id/setting_outlookAccount"
-                android:orderInCategory="300"
-                android:title="Setting Outlook"/>
-            <item
-                android:id="@+id/setting2"
-                android:orderInCategory="400"
-                android:title="背景設置"/>
-        </menu>
-    </item>
 </menu>

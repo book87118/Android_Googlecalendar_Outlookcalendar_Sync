@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android_GoogleCalendar_OutLookCalender_sync</string>
+    <string name="app_name">Sync_Calendar</string>
     <string name="recycleView_header">GoogleCalendar and OutlookCalender</string>
 
 </resources>
