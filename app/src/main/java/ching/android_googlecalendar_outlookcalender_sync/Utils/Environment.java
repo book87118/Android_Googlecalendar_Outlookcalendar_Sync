@@ -1,4 +1,4 @@
-package ching.android_googlecalendar_outlookcalender_sync;
+package ching.android_googlecalendar_outlookcalender_sync.Utils;
 
 /**
  * Created by book871181 on 16/8/8.

@@ -1,4 +1,4 @@
-package ching.android_googlecalendar_outlookcalender_sync;
+package ching.android_googlecalendar_outlookcalender_sync.Utils;
 
 import android.content.SharedPreferences;
 import android.util.Log;

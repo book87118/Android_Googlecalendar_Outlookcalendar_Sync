@@ -1,4 +1,4 @@
-package ching.android_googlecalendar_outlookcalender_sync;
+package ching.android_googlecalendar_outlookcalender_sync.RequestTask;
 
 import android.os.AsyncTask;
 import android.util.Log;
@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import ching.android_googlecalendar_outlookcalender_sync.MainActivity;
 import microsoft.exchange.webservices.data.Appointment;
 import microsoft.exchange.webservices.data.CalendarFolder;
 import microsoft.exchange.webservices.data.CalendarView;

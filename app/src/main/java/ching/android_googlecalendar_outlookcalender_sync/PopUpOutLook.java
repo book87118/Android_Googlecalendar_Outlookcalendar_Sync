@@ -1,7 +1,6 @@
 package ching.android_googlecalendar_outlookcalender_sync;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -10,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.Toast;
+
+import ching.android_googlecalendar_outlookcalender_sync.Utils.SavingSharedPreferences;
 
 
 /**

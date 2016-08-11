@@ -1,4 +1,4 @@
-package ching.android_googlecalendar_outlookcalender_sync;
+package ching.android_googlecalendar_outlookcalender_sync.Utils;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -7,6 +7,8 @@ import android.net.NetworkInfo;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+
+import ching.android_googlecalendar_outlookcalender_sync.MainActivity;
 
 
 /**

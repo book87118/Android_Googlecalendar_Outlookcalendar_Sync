@@ -1,8 +1,5 @@
-package ching.android_googlecalendar_outlookcalender_sync;
+package ching.android_googlecalendar_outlookcalender_sync.RequestTask;
 
-import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -20,6 +17,9 @@ import com.google.api.services.calendar.model.Events;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import ching.android_googlecalendar_outlookcalender_sync.MainActivity;
+import ching.android_googlecalendar_outlookcalender_sync.Utils.Environment;
 
 /**
  * Created by book871181 on 16/8/8.
